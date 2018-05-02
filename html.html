@@ -3,6 +3,10 @@
 <head>
     <title>HTML</title>
     <style>
+        .all{
+            width: 800px;
+            margin: 0 auto;
+        }
         a:link,a:visited{
             color:blueviolet;
             text-decoration: none;
@@ -15,6 +19,22 @@
             color:black;
         }
         .disabled-mouse-click{pointer-events: none;}
+        .abled-mouse-click{
+            cursor: pointer;
+        }
+        table 
+        { 
+        border-collapse:collapse; 
+        } 
+        table,th, td 
+        { 
+        border: 1px solid black; 
+        }
+        tr,td{
+            width: 200px;
+            height: 10px;
+           
+        }
         .blur-text{
             color: transparent;
             text-shadow: 0 0 5px rgba(0,0,0,0.5);
@@ -24,11 +44,21 @@
             filter:blur(1px);
             color: red;
         }
+        .back{
+            border: 1px black solid;
+            width: 800px;
+            height: 800px;
+            background-image: url("1.jpg");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+
+        }
     </style>
 </head>
 <body>
+<div class="all">
     1.
-    <h1>h1:h1-h6为标题大小，依次递减（一个页面只能使用一个h1）</h1>
+    <h1>h1:h1-h6为标题大小，依次递减<br>（一个页面只能使用一个h1）</h1>
     <h2>h2:h1-h6为标题大小，依次递减</h2>
     <h3>h3:h1-h6为标题大小，依次递减</h3>
     2.
@@ -57,10 +87,12 @@
     <br>
     8.
     <p><!-- emm -->!--注释--</p>
+    <hr />
     9.
     <p>鼠标禁用</p>
     <button class="disabled-mouse-click">鼠标禁用点击事件</button>
-    <button>鼠标未禁用点击事件</button>
+    <button class="abled-mouse-click">鼠标未禁用点击事件</button>
+    <p>cursor:pointer鼠标变小手</p>
     <br>
     <a class="disabled-mouse-click" href="http://www.baidu.com">不可点击http://www.baidu.com</a>
     <br>
@@ -76,6 +108,8 @@
     <p><em> 定义斜体字</em><i> 定义斜体字</i></p>
     <p><sub>定义下标字</sub><sup> 定义上标字</sup></ins></p>
     <p><ins>定义插入字</ins><del> 定义删除字</del></p>
+    <img src="font.jpg" width="500px" alt="font" title="font" />
+    <br>
     12.
     <p>head元素</p>
     <img src="head.jpg" width="500px" alt="head元素" title="head元素" />
@@ -88,21 +122,30 @@
         <tr>
             <th>header 1</th>
             <th>header 2</th>
+            <th>header 3</th>
         </tr>
         </thead>
         <tbody>
+         <tr>
+            <td colspan="3" align="center">border-collapse 属性设置表格的边框是否被折叠成一个单一的边框或隔开</td>
+        
+        </tr>
         <tr>
             <td>table定义表格</td>
             <td>th定义表格标题栏</td>
+            <td rowspan="2">colspan合并列数，rowspan合并行数</td>
         </tr>
         </tbody>
         <tfoot>
         <tr>
                 <td>tr定义表格的行</td>
                 <td>td定义表格的列</td>
+                
         </tr>
+       
         </tfoot>
     </table>
+    
     <br>
     14.
     <p>列表</p>
@@ -124,6 +167,19 @@
     <p>表单</p>
     <img src="menu.jpg" width="600px" alt="menu" title="menu" />
     <br>
+    16.
+    <p>权限(相加）</p>
+    <p>通用选择器* > 元素（类型）选择器 > 类选择器 > 属性选择器 > 伪类 > ID选择器 > 内联样式</p>
+    <img src="power.jpg" width="600px" alt="power" title="power" />
+    <br>
+    <img src="power2.jpg" width="600px" alt="power2" title="power2" />
+    <br>
+    17.
+    <p>背景图像</p>
+    <div class="back"></div>
+    <img src="background.jpg" width="600px" alt="background" title="background" />
+    
+</div>
 </body>
 
 </html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
